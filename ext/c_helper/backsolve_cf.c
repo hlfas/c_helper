@@ -252,7 +252,6 @@ VALUE backsolve_irr(VALUE _self, VALUE cfs, VALUE dates, VALUE num_cfs, VALUE re
   Check_Type(max_tries,         T_FIXNUM);
   //Check_Type(is_clean,   T_TRUE); Ruby doesn't have a Boolean class
   Check_Type(accrued_interest,  T_FLOAT);
-  Check_Type(year_convention,   T_FLOAT);
   
   double *c_cfs, *c_dates;
   double prev_date;
