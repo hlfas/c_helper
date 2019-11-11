@@ -272,7 +272,7 @@ VALUE backsolve_irr(VALUE _self, VALUE cfs, VALUE dates, VALUE num_cfs, VALUE re
   for (i = 0; i < c_num_cfs; i++) {
     c_cfs[i]   = NUM2DBL(rb_ary_entry(cfs,   i));
     c_dates[i] = NUM2DBL(rb_ary_entry(dates, i));
-    if (c_dates[i] <= prev_date) {
+    if (c_dates[i] < prev_date) {
       free(c_cfs); free(c_dates);
       rb_raise(rb_eRuntimeError, "dates must contain a list of monotonically increasing values, starting at a value > 0");
       return Qnil;
