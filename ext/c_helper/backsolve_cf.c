@@ -4,6 +4,11 @@
 
 #define ABS(x) (((x)<0.0) ? (-(x)) : (x))
 
+/* TODO:
+ * - Refactor code so that we're not duplicating Newton-Raphson algorithm between the price backsolve and IRR
+ */
+
+
 
 /* _compute_pv()
  * internal function that computes the sum of the discounted present values of a stream of cash flows, using
